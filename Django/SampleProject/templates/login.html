@@ -1,0 +1,82 @@
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>login page</title>
+    <style>
+        *{
+        margin:0;
+        padding:0;
+        font-family:tahoma;
+        }
+        body{
+        background:pink;
+        }
+        h1{
+        background:red;
+        color:white;
+        }
+        form{
+       border:2px solid blue;
+       width:30%;
+       height:200px;
+       background:lightgreen;
+       border-radius:20px;
+       border:none;
+        }
+         h3{
+         margin-top:20px;
+        }
+        u{
+        color:blue;
+        font-size:20px;
+        }
+        table{
+        color:blue;
+        font-size:20px;
+        }
+        .name{
+        border-radius:10px;
+        background:pink;
+        text-align:center;
+        width:200px;
+        height:25px;
+        out-line:none;
+        border:none;
+        }
+        .name:hover{
+          background:white;
+        }
+        button{
+      background:blue;
+	 color:white;
+     margin-bottom:10px;
+	 padding:8px 80px 10px 80px;
+	 border-radius:20px;
+	 border:none;
+	 outline:none;
+	 font-size:20px;
+	 cursor:pointer;
+        }
+      button:hover{
+      background:red;
+      }
+
+    </style>
+</head>
+<body>
+<center><h1>LOGIN HERE TO ACCESS SHOPINGMALL_DATA</h1><hr/><br/><br/>
+<form method="POST" class="post-form" action="/login/">
+    {% csrf_token %}
+    <u><h3>Login Here</h3></u><br/>
+    <table>
+        <tr>
+             <td>Uname:</td><td><input type="text" name="uname" placeholder="enter uname here" class="name"></td>
+        </tr>
+        <tr>
+             <td>Password:</td><td><input type="password" name="password"  placeholder="enter password here" class="name"></td>
+        </tr>
+    </table><br/><br/>
+    <button type="submit">Login</button>
+</center>
+</form>
+</body>
+</html>

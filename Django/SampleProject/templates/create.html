@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>create form</title>
+    <style>
+        *{
+        margin:0;
+        padding:0;
+        }
+        body{
+        background:pink;
+        font-family:tahoma;
+
+        }
+        h1{
+        color:blue;
+        background:yellow;
+        }
+        div{
+      margin-top:50px;
+
+        }
+        #table{
+        border:2px solid green;
+        padding:20px 40px;
+        background:orange;
+        margin-bottom:30px;
+        color:white;
+        border-radius:20px;
+        }
+                button{
+     background:blue;
+     width:250px;
+     text-align:center;
+	 color:white;
+	 margin-top:15px;
+	 padding:10px 90px 10px 90px;
+	 border-radius:20px;
+	 border:none;
+	 outline:none;
+	 font-size:20px;
+	 cursor:pointer;
+
+        }
+        button:hover{
+         background:red;
+
+        }
+    </style>
+</head>
+<center>
+<body>
+<h1>Create employee details here</h1><hr/><hr/>
+<div>
+<form method="POST" action="/create/">
+    <table id="table">
+       {% csrf_token %}
+       {{form.as_table}}
+    </table>
+  <button type="submit">Submit</button>
+
+</form>
+</div>
+
+</body>
+ </center>
+</html>

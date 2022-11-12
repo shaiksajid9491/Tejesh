@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>index page</title>
+    <style>
+        *{
+        margin:0;
+        padding:0;
+        }
+        body{
+        background:skyblue;
+        font-family:tahoma;
+        }
+        h1{
+      background:orange;
+      color:white;
+
+        }
+        table{
+         border:2px solid green;
+        padding:40px 40px;
+        background:blue;
+        margin-bottom:30px;
+        color:white;
+        border-radius:20px;
+
+        }
+        table:hover{
+        background:orange;
+        }
+
+
+        a{
+        background:red;
+        text-decoration:none;
+        color:white;
+        }
+        a:hover{
+        background:yellow;
+        curser:pointer;
+        color:green;
+        }
+        button{
+          background:blue;
+     width:250px;
+     text-align:center;
+	 color:white;
+	 margin-top:15px;
+	 padding:10px 90px 10px 90px;
+	 border-radius:20px;
+	 border:none;
+	 outline:none;
+	 font-size:20px;
+	 cursor:pointer;
+        }
+      button:hover{
+      background:red;
+      }
+
+    </style>
+</head>
+<center>
+<body>
+<h1>Products details table</h1><hr/><hr/><br/><br/>
+<table border="2px">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>SERIAL NUMBER</th>
+        <th>PRICE</th>
+        <th>CATEGORY_ID</th>
+        <th>CATEGORY_NAME</th>
+        <th>CATEGORY_DESCRIPTION</th>
+    </tr>
+{% for i in Details %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.serialnumber}}</td>
+        <td>{{i.price}}</td>
+        <td>{{i.category_id}}</td>
+        <td>{{i.category_id__name}}</td>
+        <td>{{i.category_id__description}}</td>
+    </tr>
+{% endfor %}
+  </table><br/><br/>
+</body>
+</center>
+</html>

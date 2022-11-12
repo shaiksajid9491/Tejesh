@@ -1,0 +1,58 @@
+<html>
+<head>
+   <title>Registraton Page</title>
+    <style>
+      *{
+      margin:0;
+      padding:o;
+      }
+      body{
+      background:lightgreen;
+      font-family:tahoma;
+      }
+      h1{
+      background:yellow;
+      color:red;
+      }
+      u{
+      color:blue;
+      }
+      table{
+      background:pink;
+      color:blue;
+      }
+      button{
+             background:blue;
+     width:250px;
+     text-align:center;
+	 color:white;
+	 margin-top:15px;
+	 padding:10px 90px 10px 90px;
+	 border-radius:20px;
+	 border:none;
+	 outline:none;
+	 font-size:20px;
+	 cursor:pointer;
+
+        }
+        button:hover{
+         background:red;
+
+        }
+
+    </style>
+</head>
+<body>
+<center>
+    <h1 align="center">WELCOME TO User</h1><hr/><br/><br/>
+    <u><h2>register here</h2></u><br/>
+<form method="POST" action="/register/">
+    {%csrf_token%}
+    <table border="1">
+    {{form.as_table}}
+    </table><br/><br/>
+     <button type="submit">Register</button><br>
+</form>
+</center>
+</body>
+</html>
